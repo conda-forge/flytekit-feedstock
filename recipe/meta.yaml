@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "0.26.1" %}
+{% set version = "0.30.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 83bf9ed9d014b0683f49a668113266f4a2f394d4870cd733a9b73b438fe8ef23
+  sha256: bc319afd5a20e21ea5f172379e427dcdfefc4438df73f825cd77712e6b0fe32b
 
 build:
   noarch: python
@@ -77,7 +77,7 @@ about:
   home: https://github.com/flyteorg/flytekit
   summary: Flyte SDK for Python
   license: Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
 
