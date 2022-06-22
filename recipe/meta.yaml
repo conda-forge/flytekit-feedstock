@@ -11,7 +11,8 @@ source:
   sha256: 9f8f5b6af227049b2f7d43722ca33608b059972dcf32ee2681c6482c32d467f5
 
 build:
-  noarch: python
+  number: 0
+  skip: true   # [py<37]
   entry_points:
     - pyflyte-execute=flytekit.bin.entrypoint:execute_task_cmd
     - pyflyte-fast-execute=flytekit.bin.entrypoint:fast_execute_task_cmd
@@ -19,7 +20,6 @@ build:
     - pyflyte=flytekit.clis.sdk_in_container.pyflyte:main
     - flyte-cli=flytekit.clis.flyte_cli.main:_flyte_cli
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
 
 requirements:
   host:
