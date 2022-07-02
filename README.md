@@ -11,10 +11,13 @@ Summary: Flyte SDK for Python
 
 Development: https://github.com/flyteorg/flytekit
 
-Documentation: https://flyte.org
+Documentation: https://flytecookbook.readthedocs.io/en/latest/
 
 Flytekit Python is the Python Library for easily authoring, testing, deploying,
 and interacting with Flyte tasks, workflows, and launch plans.
+
+- Flyte HomePage: https://flyte.org
+- Flyte Docs: http://docs.flyte.org/
 
 PyPI: [https://pypi.org/project/flytekit/](https://pypi.org/project/flytekit/)
 
