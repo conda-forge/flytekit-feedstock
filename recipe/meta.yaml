@@ -11,7 +11,7 @@ source:
   sha256: 9f8f5b6af227049b2f7d43722ca33608b059972dcf32ee2681c6482c32d467f5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyflyte-execute=flytekit.bin.entrypoint:execute_task_cmd
