@@ -7,11 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 9f8f5b6af227049b2f7d43722ca33608b059972dcf32ee2681c6482c32d467f5
+  # Directly install .whl build, due to upstream .tar.gz dist error
+  # Here including both:
+  # * .tar.gz, for LICENSE
+  # * .whl, for code
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
+    sha256: 9f8f5b6af227049b2f7d43722ca33608b059972dcf32ee2681c6482c32d467f5
+    folder: .
+  - url: https://files.pythonhosted.org/packages/89/54/2395b045c4fef7e22538ccd36a3a0b65eb0dacb1c3d1e1ace58e7adcad5d/flytekit-{{ version }}-py3-none-any.whl
+    fn: flytekit-{{ version }}-py3-none-any.whl
+    sha256: 28833a2b5496db0bcd2e75ccd69da82949b493afd7cb5edc530fdf9b0da0d24f
+    folder: .
 
 build:
-  number: 1
+  number: 2
   noarch: python
   entry_points:
     - pyflyte-execute=flytekit.bin.entrypoint:execute_task_cmd
@@ -19,7 +28,9 @@ build:
     - pyflyte-map-execute=flytekit.bin.entrypoint:map_execute_task_cmd
     - pyflyte=flytekit.clis.sdk_in_container.pyflyte:main
     - flyte-cli=flytekit.clis.flyte_cli.main:_flyte_cli
-  script: {{ PYTHON }} -m pip install . -vv
+  # Install from wheel, revert to standard pip install -vv . after:
+  # https://github.com/flyteorg/flytekit/pull/1088
+  script: {{ PYTHON }} -m pip install -vv flytekit-{{ version }}-py3-none-any.whl
 
 requirements:
   host:
@@ -65,6 +76,8 @@ requirements:
     - importlib_metadata >=4
 
 test:
+  files:
+    - example.py
   imports:
     - flytekit
     - flytekit.bin
@@ -75,6 +88,7 @@ test:
     - pyflyte-map-execute --help
     - pyflyte --help
     - flyte-cli --help
+    - pyflyte run example.py wf --n 500 --mean 42 --sigma 2
   requires:
     - pip
 
