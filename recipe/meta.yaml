@@ -19,7 +19,7 @@ source:
     folder: .
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyflyte-execute=flytekit.bin.entrypoint:execute_task_cmd
