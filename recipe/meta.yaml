@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.2.7" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 82ff9be5ef42fe78f8152ec31332d2d510914229013b038c59270b51a95c5094
+  sha256: d61aa8800bcf137d0f70786362f69bbe03a640e76b959624c939bb487112e799
 
 build:
   entry_points:
@@ -25,6 +25,9 @@ requirements:
     - pip
     - python >=3.8
   run:
+    - gitpython
+    - googleapis-common-protos >=1.57
+    - typing-extensions
     - python >=3.8
     - click >=6.6,<9.0
     - cloudpickle >=2.0.0
@@ -36,9 +39,9 @@ requirements:
     - docker-py >=5.0.3,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.2.0,<1.3.0
-    - grpcio >=1.43.0,<1.49.1,<2.0 # upstream blocks grpcio 1.45.0, but build is present in conda-forge
-    - grpcio-status >=1.43,<1.49.1 # upstream blocks grpcio 1.45.0, but build is present in conda-forge
+    - flyteidl >=1.3.0,<1.4.0
+    - grpcio >=1.50.0,<2.0         # upstream blocks grpcio 1.45.0, but build is present in conda-forge
+    - grpcio-status >=1.50.0,<2.0  # upstream blocks grpcio 1.45.0, but build is present in conda-forge
     - importlib-metadata
     - joblib
     - keyring >=18.0.1
