@@ -83,6 +83,9 @@ test:
     - pyflyte run example.py wf --n 500 --mean 42 --sigma 2
   requires:
     - pip
+    # Temporarily required to run tests. Can be removed in next release as has been
+    # fixed in https://github.com/flyteorg/flytekit/pull/1414
+    - git
 
 about:
   home: https://github.com/flyteorg/flytekit
