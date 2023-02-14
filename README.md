@@ -158,5 +158,6 @@ Feedstock Maintainers
 
 * [@asford](https://github.com/asford/)
 * [@bmcconeghy](https://github.com/bmcconeghy/)
+* [@cosmicBboy](https://github.com/cosmicBboy/)
 * [@sugatoray](https://github.com/sugatoray/)
 
