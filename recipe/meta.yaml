@@ -23,7 +23,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.8, <3.11
   run:
     - gitpython
     - googleapis-common-protos >=1.57
