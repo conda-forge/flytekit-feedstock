@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.4.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 308324d1cdd8e7be3f2fc48d8563dfd5c9add8d263b4d9fbde62050852b90129
+  sha256: 267ca838a7e07240bcd426d69d48ebad0816a5c01c7b924d74374f169f7ae3f5
 
 build:
   entry_points:
@@ -25,6 +25,12 @@ requirements:
     - pip
     - python >=3.8, <3.11
   run:
+    - adlfs
+    - fsspec >=2023.3.0
+    - gcsfs
+    - rich
+    - rich-click
+    - s3fs >=0.6.0
     - gitpython
     - googleapis-common-protos >=1.57
     - typing-extensions
@@ -38,10 +44,10 @@ requirements:
     - dataclasses-json >=0.5.2
     - deprecated >=1.0,<2.0
     - diskcache >=5.2.1
-    - docker-py >=5.0.3,<7.0.0
+    - docker-py >=4.0.0,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.3.5,<1.4.0
+    - flyteidl >=1.3.16,<1.4.0
     - grpcio >=1.50.0,<2.0
     - grpcio-status >=1.50.0,<2.0
     - importlib-metadata
@@ -50,7 +56,7 @@ requirements:
     - python-kubernetes >=12.0.1
     - marshmallow-jsonschema >=0.12.0
     - natsort >=7.0.1
-    - numpy <1.24.0
+    - numpy
     - pandas >=1.0.0,<2.0.0
     - pyarrow >=4.0.0,<11.0.0
     - pyopenssl
