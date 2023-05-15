@@ -63,7 +63,7 @@ requirements:
     - requests >=2.18.4,<3.0.0
     - responses >=0.10.7
     - rich
-    - rich_click
+    - rich-click
     - s3fs >0.6.0
     - sortedcontainers >=1.5.9,<3.0.0
     - statsd >=3.0.0,<4.0.0
