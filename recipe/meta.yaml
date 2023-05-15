@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.4.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 308324d1cdd8e7be3f2fc48d8563dfd5c9add8d263b4d9fbde62050852b90129
+  sha256: 267ca838a7e07240bcd426d69d48ebad0816a5c01c7b924d74374f169f7ae3f5
 
 build:
   entry_points:
@@ -23,14 +23,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8, <3.11
+    - python >=3.8, <3.12
   run:
+    - adlfs
     - gitpython
     - googleapis-common-protos >=1.57
     - typing-extensions
-    # 3.11 won't work due to a dataclass import failure
-    # https://github.com/flyteorg/flyte/issues/3181
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - click >=6.6,<9.0
     - cloudpickle >=2.0.0
     - cookiecutter >=1.7.3
@@ -41,7 +40,8 @@ requirements:
     - docker-py >=5.0.3,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.3.5,<1.4.0
+    - flyteidl >=1.5.5,<1.6.0
+    - gcsfs
     - grpcio >=1.50.0,<2.0
     - grpcio-status >=1.50.0,<2.0
     - importlib-metadata
@@ -61,7 +61,9 @@ requirements:
     - pyyaml
     - requests >=2.18.4,<3.0.0
     - responses >=0.10.7
-    - retry ==0.9.2
+    - rich
+    - rich_click
+    - s3fs >0.6.0
     - sortedcontainers >=1.5.9,<3.0.0
     - statsd >=3.0.0,<4.0.0
     - typing_extensions
