@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 07bb88f5ec1b663bbf3a0e9e073e14880cbb775c58e281cfba654553b77fd5ef
+  sha256: aa7ede6dbc6a4e5861aead9bed77fb3f7d41076b58b96eb2772aafc3ecbc4e4a
 
 build:
   entry_points:
@@ -37,21 +37,21 @@ requirements:
     - dataclasses-json >=0.5.2
     - deprecated >=1.0,<2.0
     - diskcache >=5.2.1
-    - docker-py >=5.0.3,<7.0.0
+    - docker-py >=4.0.0,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.5.5,<1.6.0
+    - flyteidl >=1.5.10
     - fsspec >=2023.3.0
     - gcsfs
-    - grpcio >=1.50.0,<2.0
-    - grpcio-status >=1.50.0,<2.0
+    - grpcio >=1.50.0,!=1.55.0,<2.0
+    - grpcio-status >=1.50.0,!=1.55.0,<2.0
     - importlib-metadata
     - joblib
     - keyring >=18.0.1
     - python-kubernetes >=12.0.1
     - marshmallow-jsonschema >=0.12.0
     - natsort >=7.0.1
-    - numpy <1.24.0
+    - numpy
     - pandas >=1.0.0,<2.0.0
     - pyarrow >=4.0.0,<11.0.0
     - pyopenssl
@@ -64,7 +64,7 @@ requirements:
     - responses >=0.10.7
     - rich
     - rich-click
-    - s3fs >0.6.0
+    - s3fs >=0.6.0
     - sortedcontainers >=1.5.9,<3.0.0
     - statsd >=3.0.0,<4.0.0
     - typing_extensions
