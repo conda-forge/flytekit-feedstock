@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: aa7ede6dbc6a4e5861aead9bed77fb3f7d41076b58b96eb2772aafc3ecbc4e4a
+  sha256: fbb8470f598ebd6b1ed08aca923d897b900b4141916102013c04be785fb43f63
 
 build:
   entry_points:
