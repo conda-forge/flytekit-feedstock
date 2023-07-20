@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: fbb8470f598ebd6b1ed08aca923d897b900b4141916102013c04be785fb43f63
+  sha256: 1216dd8d6fd0ecefac1bca90ec5887af99543b1727dbaed87434ec7246d5dedc
 
 build:
   entry_points:
@@ -25,6 +25,7 @@ requirements:
     - pip
     - python >=3.8, <3.12
   run:
+    - marshmallow-enum
     - adlfs
     - gitpython
     - googleapis-common-protos >=1.57
@@ -34,7 +35,7 @@ requirements:
     - cloudpickle >=2.0.0
     - cookiecutter >=1.7.3
     - croniter >=0.3.20,<4.0.0
-    - dataclasses-json >=0.5.2
+    - dataclasses-json >=0.5.2,<0.5.12
     - deprecated >=1.0,<2.0
     - diskcache >=5.2.1
     - docker-py >=4.0.0,<7.0.0
