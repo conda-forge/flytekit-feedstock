@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.8.1" %}
+{% set version = "1.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 1216dd8d6fd0ecefac1bca90ec5887af99543b1727dbaed87434ec7246d5dedc
+  sha256: cfe4889dfd2d02d3cc28a1145969904e0f13eac5edfa11655918bd9ceaa89e35
 
 build:
   entry_points:
@@ -44,8 +44,8 @@ requirements:
     - flyteidl >=1.5.10
     - fsspec >=2023.3.0
     - gcsfs
-    - grpcio >=1.50.0,!=1.55.0,<2.0
-    - grpcio-status >=1.50.0,!=1.55.0,<2.0
+    - grpcio >=1.50.0,!=1.55.0,<1.53.1,<2.0
+    - grpcio-status >=1.50.0,!=1.55.0,<1.53.1,<2.0
     - importlib-metadata
     - joblib
     - keyring >=18.0.1
