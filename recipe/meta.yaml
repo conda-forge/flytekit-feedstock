@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.8.2" %}
+{% set version = "1.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: cfe4889dfd2d02d3cc28a1145969904e0f13eac5edfa11655918bd9ceaa89e35
+  sha256: d290e977a15113ed7e342d081b8f3b5d538ec9cf1b537141a78acae8934593d3
 
 build:
   entry_points:
@@ -60,7 +60,7 @@ requirements:
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8,<2.0.0
     - pytz
-    - pyyaml
+    - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
     - requests >=2.18.4,<3.0.0
     - responses >=0.10.7
     - rich
