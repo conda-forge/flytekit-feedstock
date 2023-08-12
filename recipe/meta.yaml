@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.8.2" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: cfe4889dfd2d02d3cc28a1145969904e0f13eac5edfa11655918bd9ceaa89e35
+  sha256: 91dbbc1509f009fc793904e9198a70d62d3ed30fdbcf653e3a684162d0f5b178
 
 build:
   entry_points:
@@ -41,7 +41,7 @@ requirements:
     - docker-py >=4.0.0,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.5.10
+    - flyteidl >=1.5.14
     - fsspec >=2023.3.0
     - gcsfs
     - grpcio >=1.50.0,!=1.55.0,<1.53.1,<2.0
@@ -60,7 +60,7 @@ requirements:
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8,<2.0.0
     - pytz
-    - pyyaml
+    - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
     - requests >=2.18.4,<3.0.0
     - responses >=0.10.7
     - rich
