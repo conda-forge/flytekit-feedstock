@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.9.1" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: a817bf0532b106370e79a58c58573f89804167b414e68cabf0c018578168dcda
+  sha256: 31a0e7e72ffe7e581983a56555556b3d2f71efe830f48468a7eaee6a44c6ccf3
 
 build:
   entry_points:
@@ -25,6 +25,7 @@ requirements:
     - pip
     - python >=3.8, <3.12
   run:
+    - mashumaro >=3.9.1
     - jsonpickle
     - marshmallow-enum
     - adlfs
@@ -42,11 +43,11 @@ requirements:
     - docker-py >=4.0.0,<7.0.0
     - docker-image-py >=0.1.10
     - docstring_parser >=0.9.0
-    - flyteidl >=1.5.14
+    - flyteidl >=1.5.16
     - fsspec >=2023.3.0
     - gcsfs
-    - grpcio >=1.50.0,!=1.55.0,<1.53.1,<2.0
-    - grpcio-status >=1.50.0,!=1.55.0,<1.53.1,<2.0
+    - grpcio
+    - grpcio-status
     - importlib-metadata
     - joblib
     - keyring >=18.0.1
