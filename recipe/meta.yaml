@@ -63,7 +63,6 @@ requirements:
     - pytz
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
     - requests >=2.18.4,<3.0.0
-    - responses >=0.10.7
     - rich
     - rich-click
     - s3fs >=0.6.0
