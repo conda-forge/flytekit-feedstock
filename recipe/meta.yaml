@@ -25,14 +25,7 @@ requirements:
     - pip
     - python >=3.8, <3.12
   run:
-    - mashumaro >=3.9.1
-    - jsonpickle
-    - marshmallow-enum
     - adlfs
-    - gitpython
-    - googleapis-common-protos >=1.57
-    - typing-extensions
-    - python >=3.8,<3.12
     - click >=6.6,<9.0
     - cloudpickle >=2.0.0
     - cookiecutter >=1.7.3
@@ -40,26 +33,32 @@ requirements:
     - dataclasses-json >=0.5.2,<0.5.12
     - deprecated >=1.0,<2.0
     - diskcache >=5.2.1
-    - docker-py >=4.0.0,<7.0.0
     - docker-image-py >=0.1.10
+    - docker-py >=4.0.0,<7.0.0
     - docstring_parser >=0.9.0
     - flyteidl >=1.5.16
     - fsspec >=2023.3.0
     - gcsfs
+    - gitpython
+    - googleapis-common-protos >=1.57
     - grpcio
     - grpcio-status
     - importlib-metadata
     - joblib
+    - jsonpickle
     - keyring >=18.0.1
-    - python-kubernetes >=12.0.1
+    - marshmallow-enum
     - marshmallow-jsonschema >=0.12.0
+    - mashumaro >=3.9.1
     - natsort >=7.0.1
     - numpy
     - pandas >=1.0.0,<2.0.0
     - pyarrow >=4.0.0,<11.0.0
     - pyopenssl
+    - python >=3.8,<3.12
     - python-dateutil >=2.1
     - python-json-logger >=2.0.0
+    - python-kubernetes >=12.0.1
     - pytimeparse >=1.1.8,<2.0.0
     - pytz
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
@@ -70,6 +69,7 @@ requirements:
     - s3fs >=0.6.0
     - sortedcontainers >=1.5.9,<3.0.0
     - statsd >=3.0.0,<4.0.0
+    - typing-extensions
     - typing_extensions
     - urllib3 >=1.22,<2.0.0
     - wheel >=0.30.0,<1.0.0
