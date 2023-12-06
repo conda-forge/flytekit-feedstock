@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 61a5ec03d68e740b1b8560ca8b39461a3e0a1818497953eb49eb2e2804fafce5
+  sha256: ed83f26bcae45acbd9a65f2d1f72dbcd5f9d259d0a74d99cc8c811cdc3264898
 
 build:
   entry_points:
@@ -54,7 +54,7 @@ requirements:
     - natsort >=7.0.1
     - numpy
     - pandas >=1.0.0,<2.0.0
-    - pyarrow >=4.0.0,<11.0.0
+    - pyarrow >=4.0.0
     - pyopenssl
     - python >=3.8,<3.12
     - python-dateutil >=2.1
