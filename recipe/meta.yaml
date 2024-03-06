@@ -74,7 +74,7 @@ test:
     - pyflyte-map-execute --help
     - pyflyte --help
     - flyte-cli --help
-    - pyflyte run example.py wf --n 500 --mean 42 --sigma 2
+    - pyflyte run example.py hello_world_wf --name foobar
   requires:
     - pip
 
