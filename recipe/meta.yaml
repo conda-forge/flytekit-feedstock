@@ -25,7 +25,6 @@ requirements:
     - pip
     - python >=3.8, <3.13
   run:
-    - isodate
     - adlfs >=2023.3.0
     - click >=6.6,<9.0
     - cloudpickle >=2.0.0
@@ -42,6 +41,7 @@ requirements:
     - grpcio
     - grpcio-status
     - importlib-metadata
+    - isodate
     - joblib
     - jsonpickle
     - keyring >=18.0.1
@@ -52,7 +52,6 @@ requirements:
     - pyarrow
     - python >=3.8,<3.12
     - python-json-logger >=2.0.0
-    - python-kubernetes >=12.0.1
     - pytimeparse >=1.1.8,<2.0.0
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
     - requests >=2.18.4,<3.0.0
