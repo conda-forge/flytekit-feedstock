@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.10.7" %}
+{% set version = "1.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: cce6d104045a86ee1c24ce30f7f0a80a8e59b9d151466d432667cf55109b7248
+  sha256: 143bde8ead8ba4e598ea04b0c467818a2cc565699b7d739864270e7ca8e99f7c
 
 build:
   entry_points:
@@ -34,7 +34,7 @@ requirements:
     - diskcache >=5.2.1
     - docker-py >=4.0.0,<7.0.0
     - docstring_parser >=0.9.0
-    - flyteidl >=1.10.7
+    - flyteidl >=1.11.0b1
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0
     - googleapis-common-protos >=1.57
@@ -45,11 +45,13 @@ requirements:
     - joblib
     - jsonpickle
     - keyring >=18.0.1
+    - markdown-it-py
     - marshmallow-enum
     - marshmallow-jsonschema >=0.12.0
     - mashumaro >=3.9.1
     - protobuf !=4.25.0
     - pyarrow
+    - pygments
     - python >=3.8,<3.12
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8,<2.0.0
