@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.11.0" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 143bde8ead8ba4e598ea04b0c467818a2cc565699b7d739864270e7ca8e99f7c
+  sha256: 82d744149e2172ed9fecf73a549a6d5de7a7553bee0f967da2d971820e795524
 
 build:
   entry_points:
@@ -48,7 +48,7 @@ requirements:
     - markdown-it-py
     - marshmallow-enum
     - marshmallow-jsonschema >=0.12.0
-    - mashumaro >=3.9.1
+    - mashumaro >=3.11
     - protobuf !=4.25.0
     - pyarrow
     - pygments
@@ -59,7 +59,7 @@ requirements:
     - requests >=2.18.4,<3.0.0
     - rich
     - rich-click
-    - s3fs >=2023.3.0
+    - s3fs >=2023.3.0,!=2024.3.1
     - statsd >=3.0.0,<4.0.0
     - typing-extensions
     - urllib3 >=1.22,<2.0.0
