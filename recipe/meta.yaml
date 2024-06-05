@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.12.0" %}
+{% set version = "1.12.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 82d744149e2172ed9fecf73a549a6d5de7a7553bee0f967da2d971820e795524
+  sha256: c2eeec3fd52b8ebfc0ee63e7da584c2f9d0a15d0d37aa085a2385fd1a2d3f18f
 
 build:
   entry_points:
@@ -25,6 +25,8 @@ requirements:
     - pip
     - python >=3.8, <3.13
   run:
+    - jinja2
+    - jsonlines
     - adlfs >=2023.3.0
     - click >=6.6,<9.0
     - cloudpickle >=2.0.0
@@ -55,13 +57,13 @@ requirements:
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8,<2.0.0
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
-    - requests >=2.18.4,<3.0.0
+    - requests >=2.18.4,<3.0.0,!=2.32.0,!=2.32.1,!=2.32.2,!=2.32.3
     - rich
     - rich-click
     - s3fs >=2023.3.0,!=2024.3.1
     - statsd >=3.0.0,<4.0.0
     - typing-extensions
-    - urllib3 >=1.22,<2.0.0
+    - urllib3 >=1.22,<3.0.0
 
 test:
   files:
