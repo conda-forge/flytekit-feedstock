@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.12.3" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 9c9bb5f7cf3b37fc345cb59c846edc51a8fa099550174e64bd693927c0f95af0
+  sha256: dc7e9ff884e113ffe6fc0b13f281b45b9f4c4375933dc7aade5f88b867a9c750
 
 build:
   entry_points:
@@ -29,12 +29,12 @@ requirements:
     - jinja2
     - jsonlines
     - adlfs >=2023.3.0
-    - click >=6.6,<9.0
+    - click >=6.6
     - cloudpickle >=2.0.0
-    - croniter >=0.3.20,<4.0.0
+    - croniter >=0.3.20
     - dataclasses-json >=0.5.2,<0.5.12
     - diskcache >=5.2.1
-    - docker-py >=4.0.0,<7.0.0
+    - docker-py >=4.0.0
     - docstring_parser >=0.9.0
     - flyteidl >=1.12.0
     - fsspec >=2023.3.0
@@ -56,15 +56,15 @@ requirements:
     - pygments
     - python >=3.8,<3.12
     - python-json-logger >=2.0.0
-    - pytimeparse >=1.1.8,<2.0.0
+    - pytimeparse >=1.1.8
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
-    - requests >=2.18.4,<3.0.0,!=2.32.0,!=2.32.1,!=2.32.2,!=2.32.3
+    - requests >=2.18.4
     - rich
     - rich-click
     - s3fs >=2023.3.0,!=2024.3.1
-    - statsd >=3.0.0,<4.0.0
+    - statsd >=3.0.0
     - typing-extensions
-    - urllib3 >=1.22,<3.0.0
+    - urllib3 >=1.22
 
 test:
   files:
