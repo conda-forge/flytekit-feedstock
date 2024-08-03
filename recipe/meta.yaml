@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.13.0" %}
+{% set version = "1.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: dc7e9ff884e113ffe6fc0b13f281b45b9f4c4375933dc7aade5f88b867a9c750
+  sha256: d7b2b15ce477abe432da691f2d340e63261d0963970314e6f816c7abf3319ba6
 
 build:
   entry_points:
@@ -36,7 +36,7 @@ requirements:
     - diskcache >=5.2.1
     - docker-py >=4.0.0
     - docstring_parser >=0.9.0
-    - flyteidl >=1.12.0
+    - flyteidl >=1.13.1b0
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0
     - googleapis-common-protos >=1.57
