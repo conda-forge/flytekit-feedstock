@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - pip <= 24.0
+    - pip <=24.0
     - python >=3.8, <3.13
   run:
     - numpy <2
