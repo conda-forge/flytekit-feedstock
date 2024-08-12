@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.13.1" %}
+{% set version = "1.13.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 8987da685f6cab337ddea59ee7bb88062638be1e4a9880ab703dcc050bee189e
+  sha256: c25ccf7494efa10cf5eb65a709b514de839ffdb355f18f9682ff04adf62a02a4
 
 build:
   entry_points:
@@ -36,7 +36,7 @@ requirements:
     - diskcache >=5.2.1
     - docker-py >=4.0.0
     - docstring_parser >=0.9.0
-    - flyteidl >=1.12.0
+    - flyteidl >=1.13.1
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0
     - googleapis-common-protos >=1.57
@@ -80,7 +80,7 @@ test:
     - flyte-cli --help
     - pyflyte run example.py hello_world_wf --name foobar
   requires:
-    - pip
+    - pip <24.2
 
 about:
   home: https://github.com/flyteorg/flytekit
