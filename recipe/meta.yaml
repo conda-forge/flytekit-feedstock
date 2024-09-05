@@ -77,7 +77,7 @@ test:
     - pyflyte-fast-execute --help
     - pyflyte-map-execute --help
     - pyflyte --help
-    - pyflyte -vv run example.py hello_world_wf --name foobar
+    - FLYTE_SDK_LOGGING_LEVEL=10 pyflyte -vvv run example.py hello_world_wf --name foobar
     - flyte-cli --help
   requires:
     - pip <24.2
