@@ -77,8 +77,8 @@ test:
     - pyflyte-fast-execute --help
     - pyflyte-map-execute --help
     - pyflyte --help
-    - flyte-cli --help
     - pyflyte run example.py hello_world_wf --name foobar
+    - flyte-cli --help
   requires:
     - pip
 
