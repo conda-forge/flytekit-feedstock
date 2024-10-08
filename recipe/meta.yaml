@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.13.4" %}
+{% set version = "1.13.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: d39e97d1b4946aa64738b5e814c38743eb7f572bb6dc53aa5c4873bfb0d4e6ed
+  sha256: 4de7bd99687406b04d25bcc31a175d33875d792ee3fcda1b1ad1263cbdb1c8de
 
 build:
   entry_points:
@@ -69,6 +69,7 @@ requirements:
 test:
   files:
     - example.py
+    - example-inputs.json
   imports:
     - flytekit
   commands:
@@ -78,7 +79,7 @@ test:
     - pyflyte-map-execute --help
     - pyflyte --help
     - flyte-cli --help
-    - pyflyte run example.py hello_world_wf --name foobar
+    - pyflyte run example.py hello_world_wf --inputs-file example-inputs.json
   requires:
     - pip <24.2
 
