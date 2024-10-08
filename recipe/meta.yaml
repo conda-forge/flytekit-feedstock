@@ -24,6 +24,7 @@ requirements:
   host:
     - pip
     - python >=3.8, <3.13
+    - setuptools
   run:
     - typing_extensions
     - numpy <2
