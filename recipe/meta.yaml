@@ -1,13 +1,14 @@
 {% set name = "flytekit" %}
-{% set version = "1.13.12" %}
+{% set version = "1.13.13" %}
+{% set python_min = python_min|default("3.8") %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: e416f2c3d84ade6ddf2839cb273348c104e12cfac85856f2d79bbd9783bd2a87
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
+  sha256: 329ca9498e9511fb23fddc10373b45d65880e57719af25fafc79a1703222f91f
 
 build:
   entry_points:
@@ -56,7 +57,7 @@ requirements:
     - protobuf !=4.25.0
     - pyarrow
     - pygments
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
@@ -84,6 +85,7 @@ test:
     - pyflyte run example.py hello_world_wf --inputs-file example-inputs.json
   requires:
     - pip <24.2
+    - python ={{ python_min }}
 
 about:
   home: https://github.com/flyteorg/flytekit
