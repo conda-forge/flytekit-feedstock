@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.13.14" %}
+{% set version = "1.14.1" %}
 {% set python_min = python_min|default("3.8") %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: 301b9a6ab1dd87c6f0020ba48c1be5427188926d72851f476bd08223cf7d1379
+  sha256: 70ce146cb163b2a4345cfa0696b76122ceb95c5c253a86fcb0abb6e2943f52ef
 
 build:
   entry_points:
@@ -27,6 +27,7 @@ requirements:
     - python >=3.8, <3.13
     - setuptools
   run:
+    - msgpack-python >=1.1.0
     - typing_extensions
     - numpy <2
     - jinja2
@@ -39,12 +40,12 @@ requirements:
     - diskcache >=5.2.1
     - docker-py >=4.0.0
     - docstring_parser >=0.9.0
-    - flyteidl >=1.13.4
+    - flyteidl >=1.13.9
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0
     - googleapis-common-protos >=1.57
-    - grpcio
-    - grpcio-status
+    - grpcio !=1.68.0,!=1.68.1
+    - grpcio-status !=1.68.0,!=1.68.1
     - importlib-metadata
     - isodate
     - joblib
@@ -53,7 +54,7 @@ requirements:
     - markdown-it-py
     - marshmallow-enum
     - marshmallow-jsonschema >=0.12.0
-    - mashumaro >=3.11
+    - mashumaro >=3.15
     - protobuf !=4.25.0
     - pyarrow
     - pygments
