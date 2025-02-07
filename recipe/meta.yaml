@@ -18,7 +18,7 @@ build:
     - pyflyte=flytekit.clis.sdk_in_container.pyflyte:main
     - flyte-cli=flytekit.clis.flyte_cli.main:_flyte_cli
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
