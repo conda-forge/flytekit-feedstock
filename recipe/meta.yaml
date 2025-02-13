@@ -1,6 +1,7 @@
 {% set name = "flytekit" %}
 {% set version = "1.14.6" %}
 {% set python_min = python_min|default("3.9") %}
+{% set python_max = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -18,13 +19,13 @@ build:
     - pyflyte=flytekit.clis.sdk_in_container.pyflyte:main
     - flyte-cli=flytekit.clis.flyte_cli.main:_flyte_cli
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.8, <3.13
+    - python {{ python_min }}
     - setuptools
   run:
     - msgpack-python >=1.1.0
@@ -58,7 +59,7 @@ requirements:
     - protobuf !=4.25.0
     - pyarrow
     - pygments
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<={{ python_max }}
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
@@ -86,7 +87,7 @@ test:
     - pyflyte run example.py hello_world_wf --inputs-file example-inputs.json
   requires:
     - pip <24.2
-    - python ={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/flyteorg/flytekit
@@ -96,7 +97,7 @@ about:
     - LICENSE
     - NOTICE
   description: |
-    Flytekit Python is the Python Library for easily authoring, testing, deploying, 
+    Flytekit Python is the Python Library for easily authoring, testing, deploying,
     and interacting with Flyte tasks, workflows, and launch plans.
 
     - Flyte HomePage: https://flyte.org
