@@ -18,7 +18,7 @@ build:
     - pyflyte=flytekit.clis.sdk_in_container.pyflyte:main
     - flyte-cli=flytekit.clis.flyte_cli.main:_flyte_cli
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -58,7 +58,7 @@ requirements:
     - protobuf !=4.25.0
     - pyarrow
     - pygments
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }},<3.13
     - python-json-logger >=2.0.0
     - pytimeparse >=1.1.8
     - pyyaml !=6.0.0,!=5.4.0,!=5.4.1
