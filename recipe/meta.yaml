@@ -1,5 +1,5 @@
 {% set name = "flytekit" %}
-{% set version = "1.15.1" %}
+{% set version = "1.15.2" %}
 {% set python_min = python_min|default("3.9") %}
 {% set python_max = "3.12" %}
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flytekit-{{ version }}.tar.gz
-  sha256: f31131be2d8cbbb720db354835833f8d5c9904790dd477582fd396db9e5d1c78
+  sha256: 1934ee5373884764d4dbd90f7258f489bb4c8b18ba522ddca83ebece96eb0bca
 
 build:
   entry_points:
